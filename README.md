@@ -26,7 +26,7 @@ Create a python file. Copy-paste my below code from line 1 to line 85. save it. 
 
 # Python Code for training the data. 
 
-# line 1
+#Line 1
 
 import keras                                                                
 
