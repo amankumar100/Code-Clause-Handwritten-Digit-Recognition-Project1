@@ -22,10 +22,10 @@ First take the training data python code and run it. It will take few minutes to
 Limits:
 There may be chances that code might not work properly. Suppose if you draw 7 it tells you 8, this is due to AI recognization capacity but rest of the time it will work properly.
 
-
+create a python file. Copy-paste my below code from line 1 to line 80. save it. Then create another python file copy-paste my below code from line 85 to line 142 and save it. Then run the first python file wait for few minutes then run the next code.
 # Python Code for training the data. Be sure to install the necessary libraries or packages previously.
 
-import keras
+import keras                                            # line 1
 
 from keras.datasets import mnist
 
@@ -77,12 +77,12 @@ score = model.evaluate(x_test, y_test, verbose=0)
 print("loss:", score[0])
 print("accuracy:", score[1])
 
-model.save("mnist.h5")
+model.save("mnist.h5")                       #line 80
  
  
 # Python code for executing the output.
 
-from keras.models import load_model
+from keras.models import load_model          #line 85
 from tkinter import *
 import tkinter as tk
 import win32gui
@@ -139,5 +139,5 @@ class App(tk.Tk):
         self.canvas.create_oval(self.x-r,self.y-r,self.x+r,self.y+r,fill='black')
                                 
 app = App()
-mainloop()
+mainloop()                     # line 142
 
