@@ -26,7 +26,7 @@ Create a python file. Copy-paste my below code from line 1 to line 85. save it. 
 
 # Python Code for training the data. 
 
-#Line 1
+# Line 1
 
 import keras                                                                
 
@@ -82,12 +82,12 @@ print("accuracy:", score[1])
 
 model.save("mnist.h5") 
 
-#Line 85
+# Line 85
  
  
 # Python code for executing the output.
 
-#Line 90
+# Line 90
 
 from keras.models import load_model                    
 
@@ -154,5 +154,5 @@ app = App()
 
 mainloop()                   
 
-#Line 157
+# Line 157
 
