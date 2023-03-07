@@ -82,12 +82,12 @@ print("accuracy:", score[1])
 
 model.save("mnist.h5") 
 
-#line 85
+#Line 85
  
  
 # Python code for executing the output.
 
-#line 90
+#Line 90
 
 from keras.models import load_model                    
 
@@ -154,5 +154,5 @@ app = App()
 
 mainloop()                   
 
-# line 157
+#Line 157
 
