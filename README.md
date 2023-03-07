@@ -12,7 +12,8 @@ Before implementation of this project. Certain libraries and packages i have ins
 6. Pillow
 7. Tkinter
 
-Above packages can be installed using cmd in windows or terminal in mac or shell in Linux.
+Above packages can be installed using cmd/command prompt in windows or terminal in mac or shell in Linux.
+For example you want to install numpy. Type " pip install numpy " in cmd and press enter, it gets installed as per your internet connection.
 Be sure to intsall all the above libraries or packages.
 
 There are 2 types of python codes i have mentioned below. One is the python code for training the data, other for executing the python code output.
@@ -22,7 +23,18 @@ First take the training data python code and run it. It will take few minutes to
 Limits:
 There may be chances that code might not work properly. Suppose if you draw 7 it tells you 8, this is due to AI recognization capacity but rest of the time it will work properly.
 
-Create a python file. Copy-paste my below code from line 1 to line 85. save it. Then create another python file copy-paste my below code from line 90 to line 157 and save it. Then run the first python file wait for few minutes then run the next code. Be sure to install the necessary libraries or packages previously before running it.
+Step 1: Install all the necessary libraries or packages previously before running it. I have mentioned at the beginning.
+
+Step 2: Create a python file.
+
+Step 3: Copy-paste my below code between the line 1 and line 85. Save it. Don't include line 1 and line 85.
+
+Step 4: Then create another python file copy-paste my below code between the line 90 and line 157 and save it. Don't include line 90 and line 157.
+
+Step 5: Then run the first python file wait for few minutes then run the next code.
+
+You can use any python code editor or app. I have used only VSCode. You can also use Jupyter Notebook, Google collab or any other editor you want.
+
 
 # Python Code for training the data. 
 
