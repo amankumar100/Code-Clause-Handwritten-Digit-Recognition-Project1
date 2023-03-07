@@ -26,7 +26,9 @@ def predict_digit(img):
     return np.argmax(res),max(res)
 
 class App(tk.Tk):
+
     def __init__(self):
+    
         tk.Tk.__init__(self)
         
         self.x = self.y = 0
@@ -63,4 +65,5 @@ class App(tk.Tk):
         self.canvas.create_oval(self.x-r,self.y-r,self.x+r,self.y+r,fill='black')
                                 
 app = App()
+
 mainloop()
