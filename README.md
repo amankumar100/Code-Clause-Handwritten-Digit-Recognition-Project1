@@ -15,7 +15,7 @@ Before implementation of this project. Certain libraries and packages i have ins
 Above packages can be installed using cmd in windows or terminal in mac or shell in Linux.
 Be sure to intsall all the above libraries or packages.
 
-There are 2 types of python files I have attached in 2 different branches. One is the python code for training the data, other for executing the python code output.
+There are 2 types of python codes i have mentioned below. One is the python code for training the data, other for executing the python code output.
 
 First take the training data python code and run it. It will take few minutes to train for certain level of accuracy. Then run the output executed python code. It will execute the output.
 
