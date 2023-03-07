@@ -1,24 +1,50 @@
-# Code-Clause-Handwritten-Digit-Recognition-Project1
-This is an AI based project made by me for code clause intenship 
-Before implementation of this project certain libraries or packages have to be installed. Following I have installed. Open CMD and type and install this.
+# Pyhton Code for training the data, be sure to intsall previously the necessary libraries and packages.
 
-step 1: pip install numpy
+import keras
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Flatten
+from keras.layers import Conv2D, MaxPooling2D
+from keras import backend as k
 
-step 2: pip install tensorflow
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
 
-step 3: pip install mnist
+x_train = x_train.reshape(x_train.shape[0], 28, 28, 1)
+x_test = x_test.reshape(x_test.shape[0], 28, 28, 1)
+input_shape = (28, 28, 1)
 
-step 4: pip install matplotlib
+y_train = keras.utils.to_categorical(y_train, 10)
+y_test = keras.utils.to_categorical(y_test, 10)
 
-step 5: pip install tkinter
+x_train = x_train.astype("float32")
+x_test = x_test.astype("float32")
 
-step 6: pip install PIL
+x_train /= 255
+x_test /= 255
 
-step 7: pip install keras
+batch_size = 128
+num_classes = 10
+epochs = 100
 
-after this there will be 2 python files we have to create one for training the AI data to recognize the handwritten digits and other for executing the output as per user input.
-The codes of both the files I have mentioned in this repository.
-Run the first one. It will take some time to execute, run the epochs for data accuracy. After its completion. Run the other file. I9t will execute the output where you have to draw the digit and it will predict the output along with the percentage accuracy.
+model = Sequential()
+model.add(Conv2D(32, kernel_size=(5, 5), activation="relu", input_shape=input_shape))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Conv2D(64, kernel_size=(5, 5), activation="relu"))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Flatten())
 
-Limits:
-Sometimes it may happen the code may not work properly as per user input due to AI based outputs for example sometimes if you draw 7 it will show 8 due to some AI judging difficulties but it will work rest of the time correctly.
+model.add(Dense(128, activation="relu"))
+model.add(Dropout(0.3))
+model.add(Dense(64, activation="relu"))
+model.add(Dropout(0.5))
+model.add(Dense(num_classes, activation="softmax"))
+
+model.compile(loss=keras.losses.categorical_crossentropy, optimizer=keras.optimizers.Adadelta(), metrics=["accuracy"])
+hist = model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, verbose=1, validation_data=(x_test, y_test))
+
+score = model.evaluate(x_test, y_test, verbose=0)
+
+print("loss:", score[0])
+print("accuracy:", score[1])
+
+model.save("mnist.h5")
