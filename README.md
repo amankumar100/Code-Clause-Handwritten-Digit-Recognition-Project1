@@ -1,4 +1,4 @@
-# Pyhton Code for training the data, be sure to intsall previously the necessary libraries and packages.
+# Pyhton Code for training the data, be sure to intsall previously the necessary libraries and packages
 
 import keras
 from keras.datasets import mnist
