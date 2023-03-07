@@ -1,3 +1,5 @@
+Hello this is Aman Kumar!
+
 This project made by me is a AI Handwritten Digits Recognition project where user draws the digits and AI predicts the digit.
 
 Before implementation of this project. Certain libraries and packages i have installed.
