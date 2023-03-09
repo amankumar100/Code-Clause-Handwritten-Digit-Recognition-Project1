@@ -101,21 +101,21 @@ model.save("mnist.h5")
 
 # Line 90
 
-   from keras.models import load_model                    
+    from keras.models import load_model                    
 
-   from tkinter import *
+    from tkinter import *
 
-   import tkinter as tk
+    import tkinter as tk
 
-   import win32gui
+    import win32gui
 
-   from PIL import ImageGrab, Image
+    from PIL import ImageGrab, Image
 
-   import numpy as np
+    import numpy as np
 
-   model=load_model('mnist.h5')
+    model=load_model('mnist.h5')
 
-   def predict_digit(img):
+    def predict_digit(img):
        img=img.resize((28,28))
        img=img.convert('L')
        img=np.array(img)
@@ -125,8 +125,8 @@ model.save("mnist.h5")
        res=model.predict([img])[0]
        return np.argmax(res),max(res)
 
-  class App(tk.Tk):
-       def __init__(self):
+    class App(tk.Tk):
+        def __init__(self):
            tk.Tk.__init__(self)
         
            self.x = self.y = 0
@@ -162,9 +162,9 @@ model.save("mnist.h5")
            r=8
            self.canvas.create_oval(self.x-r,self.y-r,self.x+r,self.y+r,fill='black')
                                 
-   app = App()
+    app = App()
 
-   mainloop()                   
+    mainloop()                   
 
 # Line 157
 
