@@ -27,9 +27,9 @@ Step 1: Install all the necessary libraries or packages previously before runnin
 
 Step 2: Create a python file.
 
-Step 3: Copy-paste my below code between the line 1 and line 85. Save it. Don't include line 1 and line 85.
+Step 3: Copy-paste my below training code. Save it.
 
-Step 4: Then create another python file copy-paste my below code between the line 90 and line 157 and save it. Don't include line 90 and line 157.
+Step 4: Then create another python file copy-paste my below output code and save it.
 
 Step 5: Then run the first python file wait for few minutes then run the next code.
 
@@ -37,8 +37,6 @@ You can use any python code editor or app. I have used only VSCode. You can also
 
 
 # Python Code for training the data. 
-
-# Line 1
 
     import keras                                                                
 
@@ -93,13 +91,8 @@ You can use any python code editor or app. I have used only VSCode. You can also
     print("accuracy:", score[1])
 
     model.save("mnist.h5") 
-
-# Line 85
- 
  
 # Python code for executing the output.
-
-# Line 90
 
     from keras.models import load_model                    
 
@@ -165,6 +158,3 @@ You can use any python code editor or app. I have used only VSCode. You can also
     app = App()
 
     mainloop()                   
-
-# Line 157
-
